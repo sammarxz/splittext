@@ -238,8 +238,9 @@ function SplitText(identifier, vars){
 			   	div.style.display = "block";
 			   	if(this.vars.linesClass!==undefined && this.vars.linesClass!="undefined"){
 			   		this.class = this.vars.linesClass.replace("++",j+1);
-			   	}
-			   	div.innerHTML = text.substring(lineStart,lineEnd)
+                   }
+                div.classList.add("o--hidden");
+			   	div.innerHTML = `<span class="line-content d--block">${text.substring(lineStart,lineEnd)}</span>`;
 			   	current.appendChild(div);
 
 
